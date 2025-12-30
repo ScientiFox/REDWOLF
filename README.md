@@ -1,3 +1,5 @@
+
+
 # REDWOLF
 
 ## Introduction
@@ -32,6 +34,8 @@ There's a few particular techniques we use to get the most bang for your buck on
 #### Recommended Models
 For each module, we refine both the prompts used and the models selected to respond to those prompts with a large number of tests, selecting down the recommended modules to a subset of those which perform well while requiring the least computation time. Sometimes these tests are objectively verifiable, such as with the mathSolver module, which must produce answers which are verifiably correct, while others are semi-subjective ('is this summary factually accurate but brief') and others fully subjective ('Does this brainstorming suggestion further creative thought?').
 
+Some examples of these tests are included in the `output examples` folder, and test articles are included in the `REDWOLF_core_prompts.py` package, as well as source material in the `worker tests` file.
+
 #### Divide and Conquer
 In addition to choosing the most efficient model for a given task, decomposing full tasks into appropriately small subtasks is also important to making use of the limited resources of a local system. Firstly, dividing tasks which are LLM suitable (summaries, answering questions) from those which can or should be handled by other methods (extracting lists, searching for keyword) allocates cognitive loading to the most effective places possible.
 
@@ -43,15 +47,21 @@ This also means applying models to segments of subtasks tactically, using the re
 ##### Pyramid Processing
 One such finesse method we use frequently (at time of writing within the summarizor, textAnalysis, and chatter) is a pyramid approach to text analysis, illustrated in the following diagram:
 
-<img width="1167" height="696" alt="pyramid_processing" src="https://github.com/user-attachments/assets/f11a258f-b07a-48eb-b7c5-ec391b3147ce" />
+<img width="700" alt="pyramid_processing" src="https://github.com/user-attachments/assets/f11a258f-b07a-48eb-b7c5-ec391b3147ce" />
 
 The idea here is that some module processes segments of the text (ideally overlapping segments, to ensure that segues and transitions are incorporated and preserved, and to prevent the subsections from becoming disjoint) rather than the full text, are processed in parallel by a module, and then the results are either further individually processed, or joined for later processing by other modules, depending on the task. This way, we can leverage the advantage of the exponentially escalating cost for input size, while maintaining a reasonable input length, avoiding context limits, and incorporating transitional information.
 
 Note that this method does not only apply to multistep summaries, or even single-task layers! Within the textAnalysis module, the first layer is a set of text-compressing summaries, then the next tier is answering a set of analysis questions, and then the next layer groups subsets of the analysis questions to answer syntheis questions!
 
 #### Multiagent Systems
+Another advantage of not working with a cloud system owned and operated by a service is that we're not bound by their noncompete clauses! We can freely use models from multiple sources, compare their outputs (as in the multianswer and debator modules), select ideal workers for individual tasks and contexts (as in all modules), or use them to critique one anothers' outputs from different perspectives (as in the debator, reference searcher, and analysis modules), or collect multiple outputs from differnet providers and then stitch them together into a single answer from different sources (again, the multianswer module).
+
+The two real benefits this provides us are checks and balances, for critiquing differnt models from (more or less) independent observers, and the ability to investigate conceptual spaces more thoroughly, eliminating biases and weaknesses in any one-model approach by overlapping different combinations of strengths and weaknesses.
 
 #### Feedback Controls
+Finally, the use of feedback, from classical systems, user input, reference sources, and other models to constrain the output to sane, reasonable, and useful outputs is a critical part of making the systems reliable and useful. Although the usefulness of some subjective applications (such as brainstorming) is itself equally subjective, constraining and checking the outputs for such subjective applications to more concrete tasks like problem solving is important to making the modules practically applicable.
+
+Towards that end, all of these means of feedback control are applied throughout all the modules to varying degrees, from the tightly controlled reference searcher, which is tasked with only reporting and collating information from  provided sources, to the very loose chatter, which still uses an additional model to select out salient information for long term recall, to guide the systems towards productive output.
 
 ## Modules
 
