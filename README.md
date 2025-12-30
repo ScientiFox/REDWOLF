@@ -38,6 +38,23 @@ Additionally, nltk needs the following corpus downloads:
 `nltk.download("vader_lexicon")`
 `nltk.download('subjectivity')`
 
+And a set of ollama compatile LLMs should be downloaded. We recommend, at a minimum:
+
+`driaforall/tiny-agent-a:0.5b`
+`driaforall/tiny-agent-a:1.5b`
+`driaforall/tiny-agent-a:3b`
+`granite4:1b`
+`granite4:3b`
+`granite4:350m`
+`tinyllama`
+`stablelm2`
+`minicpm-v`
+`qwen3`
+`llama3.2`
+
+### Execution
+
+To execute the package, the contents should be downloaded, with a suitable ZIM archive located in the same directory. `RW2_server.py` and `REDWOLF2.py` should then be executed as independent processes. The UI will open in your default browser automatically.
 
 ## Techniques
 
