@@ -115,16 +115,27 @@ The structure of the input message prompts and SYSTEM command are designed to en
 <img width="840" alt="debator" src="https://github.com/user-attachments/assets/13bc5e20-215a-4456-9cbc-8588d81ae4d9" />
 
 #### Debator
-The debator module 
+The debator module is designed to take advantage of the combination of adversarial feedback which can be had by critiquing one model's output with another model, as well as the benefits of using multi-model analysis to overlap weaknesses with strengths. Supplied with a topic and (possibly) two points regarding that topic, the debator module iteratively provides each of two models with a prompt to first generate an opening argument, and then to modify their own arguments in response to those proposed by their opposite's working arguments and points.
+
+<img width="420" height="770" alt="debator_supervisor" src="https://github.com/user-attachments/assets/238d0e88-7cdd-4a59-9caa-d402510923be" />
+
+After a set number of rounds of iterative feedback, revisions, and rebuttals, the final pair of points and arguments are evaluated by a moderator module, which attempts to draw a nuanced, multifaceted conclusion from the direction the back and forth debate generated.
+
+This module works best, relative to human expectations, when provided with a pair of focused, specific points to debate. However, if provided with one or no points, it is also written to generate an opposition to a single point, or attempt to generate a pair of opposing points from a topic alone. However, these generated points may not be oriented in a direction which feels productive to the user.
 
 <img width="840" alt="text_analysis" src="https://github.com/user-attachments/assets/e9c52c20-b90c-4ba8-a6c1-c5edc7faabfc" />
 
 #### Text Analysis
+The text analysis module seeks to integrate the generative capacity of LLMs with well-established guidelines and human-centric prompting for critical thinking. It makes thorough use of both the pyramidal processing scheme and a divide and conquer attitude to implement a thorough analysis of a supplied text, focusing on breaking down the overall source into smaller segments and concise representations that can be efficiently and feely manipulated, rather than trying to ask many broad questions about a whole, large source.
+
+It begins by dividing the source into segments, which are then condensed into shorter keypoint sumamries. Those key points are then joined into a concise version of the text which can be more easily analyzed, and a central thesis and abstract are extracted from it. Those shorter segment representations are then used to answer a set of fundamental 'who, what, when, where, why, how' questions which frame and contextualize the core information. These answers are then grouped into sets of answers which are pertinent to higher-level information synthesis questions, and used as the source information for a further submodule to answer those questions.
+
+The combined set of thesis, abstract, concise text, analysis questions, and synthesis questions are then combined into a final report on the text, outlining its content, relevance, implications, strenghts, weaknesses, possible alternatives, and sources for further investigation as the final output.
 
 <img width="520" alt="refiner" src="https://github.com/user-attachments/assets/57ff6251-eda3-4ea3-92fd-ca0e64e732d8" />
 
 #### Refiner
-
+The refiner is intended as a component of a future brainstorming and problem-solving focused module, however is useful as a stand-alone module for editing and thought clarification uses as well. It is a heavily user interaction-based module, in which the module is provided with an initial statement (typically from a user in the standalone version, but intended to be a first-pass statement from an LLM when used as a submodule) for which the user provides feedback
 
 
 ## Prospective Additions
