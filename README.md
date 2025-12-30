@@ -155,7 +155,7 @@ The structure of the input message prompts and SYSTEM command are designed to en
 #### Debator
 The debator module is designed to take advantage of the combination of adversarial feedback which can be had by critiquing one model's output with another model, as well as the benefits of using multi-model analysis to overlap weaknesses with strengths. Supplied with a topic and (possibly) two points regarding that topic, the debator module iteratively provides each of two models with a prompt to first generate an opening argument, and then to modify their own arguments in response to those proposed by their opposite's working arguments and points.
 
-<img width="420" height="770" alt="debator_supervisor" src="https://github.com/user-attachments/assets/238d0e88-7cdd-4a59-9caa-d402510923be" />
+<img width="525" height="770" alt="debator_supervisor" src="https://github.com/user-attachments/assets/238d0e88-7cdd-4a59-9caa-d402510923be" />
 
 After a set number of rounds of iterative feedback, revisions, and rebuttals, the final pair of points and arguments are evaluated by a moderator module, which attempts to draw a nuanced, multifaceted conclusion from the direction the back and forth debate generated.
 
@@ -170,10 +170,33 @@ It begins by dividing the source into segments, which are then condensed into sh
 
 The combined set of thesis, abstract, concise text, analysis questions, and synthesis questions are then combined into a final report on the text, outlining its content, relevance, implications, strenghts, weaknesses, possible alternatives, and sources for further investigation as the final output.
 
-<img width="520" alt="refiner" src="https://github.com/user-attachments/assets/57ff6251-eda3-4ea3-92fd-ca0e64e732d8" />
+<img width="630" alt="refiner" src="https://github.com/user-attachments/assets/57ff6251-eda3-4ea3-92fd-ca0e64e732d8" />
 
 #### Refiner
 The refiner is intended as a component of a future brainstorming and problem-solving focused module, however is useful as a stand-alone module for editing and thought clarification uses as well. It is a heavily user interaction-based module, in which the module is provided with an initial statement (typically from a user in the standalone version, but intended to be a first-pass statement from an LLM when used as a submodule) for which the user provides feedback. That feedback is then used by the module to generate a revised form of the statement.
 
 The user is then asked to approve or disapprove of the changes. If the user approves, then the working statement is updated to the new version, and prompted for further revisions. Otherwise, the statement remains the same, and the user is prompted to provide alternative feedback for another pass.
 
+## Prospective Additions
+There are a few additional models and system updates we are hoping to implement in the near future
+
+#### Problem Solver
+While the chatter, multianswer, and debator models are reasonably adept at assisting with practical problem solving (see the examples for generating recipes from present ingredients and extracting objects from pipes) they are not specifically engineered to perform these tasks, especially not with, say, the pointed effectiveness of the text analysis module.
+
+The objective for a problem solving module would be to combine the refiner module for problem statement and method refinement with the samy pyramidal techniques of analysis and synthesis developed in the text analysis module, but instead of applying critical thinking questions and methods, to apply structured problem-solving strategies such as TRIZ and SCAMPER.
+
+The current model plan is to take a problem statement, create a prospective decomposition of the problem, iteratively refine each sub-problem until acceptable, then solutions for the sub problems, derived from those techniques, and then prepare a final joint model for the solutions from the aggregate chain of subproblem solutions. There is also a hypothetical multipath component derived from the notion of using the subproblem chain as a baseline for a world model to apply the GAP algorithm, using the LLM's ability to generate prospective and classify results of an action taken from a state as a world model.
+
+#### Brainstormer
+Similarly, the chatter and multianswer modules are reasonably effective at assisting with idea generation, and the refiner module can be used to make adjustments to individual proposal elements, but we have a plan to integrate the multianswer module for ideation with the refiner for revisions into a direct module which will take an initial subject and attempt to generate concepts which either advance, challenge, invert, or otherwise expand the creative evaluation of the original idea.
+
+Much the same as the text analyzer and prospective problem solver, the idea is to implement structured brainstorming session guidelines and creativity exercises into an interactive back and forth, in which the AI system processes a list of suggestions, propositions, and other ideas by sequentially trying to transform the ideas in various directions, with user feedback and annotations guiding the overall analysis. A further cross-product like recombination method for linking seemingly unrelated ideas to find unexpected relationships and explore new directions is also planned, along with a synonym-linking conceptual transformation method.
+
+The grand idea is to provide a suite of tools which can take the conceptual structure of ideas and permute them, with guidance provided by the user to keep the train of thought moving in the direction they want, and ideally towards productive outputs.
+
+#### Literature Search
+The current reference searcher is designed to integrate with material sourced from an offline copy of wikipedia via ZIM archives. This initial design was based around entirely local execution as a primary value for the package, in line with the desire to be decoupled from cloud and internet based services for reliability. However, there are certainly valuable resources that are only practically maintained online, and it would be ideal to have an option to interact with those.
+
+The summarizor and text analysis modules currently support URL based extraction of source material, but we would also like to implement a module specifically to interact with academic databases, such as Google Scholar, for the purposes of doing literature review. The goal would be siilar to the reference searcher module, but would generate search strings to find papers related to a research topic, and then evaluate the abstracts from many such results to prepare a short list of likely good candidates for review on the topic.
+
+The prospective method is to gather a list of papers which appear closely relevant to the topic at hand, and then to sort those papers based on a direct comparison, abstract to abstract, using a standard sorting algorithm, with the relative ranking of any one abstract versus another determined by a shallow depth LLM based on the context. From that sorted list, then, top results can be evaluated by the user, or investigated in the prepared order.
