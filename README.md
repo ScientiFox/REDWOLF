@@ -65,8 +65,65 @@ Finally, the use of feedback, from classical systems, user input, reference sour
 Towards that end, all of these means of feedback control are applied throughout all the modules to varying degrees, from the tightly controlled reference searcher, which is tasked with only reporting and collating information from  provided sources, to the very loose chatter, which still uses an additional model to select out salient information for long term recall, to guide the systems towards productive output.
 
 ## Modules
+The modules currently included are detailed below, with descriptions and operational flowcharts. Every module must include a `run()` method which executes its primary function, and a `set_System()` method which applies SYSTEM commands to its submodules and models.
 
-#### 
+<img width="420" height="486" alt="simple_module" src="https://github.com/user-attachments/assets/999b8a85-da50-4e48-83eb-3ef5ea3847f0" />
+
+#### Simple Module
+The simple module is a parent class for many of the modules and submodules implemented in the later modules, and serves as a simple scaffold for the primary execution of a simple tasker dedicated to performing a singular role. The key notes about the module are that it does not implement any memory- every input submission is sent to the model with no prior history, and is formatted around a common template prompt which takes some keyed inputs which are embedded within the reference prompt in {brackets} which is replaced by the input from the module `run()` method. The reference prompts form the framework for the use of structured prompt engineering to generate outputs which are consistent with individual module goals.
+
+<img width="520" alt="context_listor" src="https://github.com/user-attachments/assets/1968c051-971e-4a98-beb9-3322e6bab521" />
+
+#### Context Listor
+The context listor is a submodule which is used within the reference searcher to identify article search strings based on the question which the reference searcher is being asked. It is implemented as a class rather than an instance of a simple module (unlike most other single-purpose submodules) primarily as an example implementation test case and proof of concept from the early stages of development. As such, it is not selectable in the UI.
+
+<img width="520" alt="basic_summarizor" src="https://github.com/user-attachments/assets/a651d9ec-71e4-48c8-986e-140a5c6b0da6" />
+
+#### Basic Summarizor
+The basic summarizor module is a strong workhorse submodule which can also be applied as an individually through the UI. It is deigned to take in a source text and summarize it, either by dividing into segments (as described in the section on pyramidal processing above) or as a whole text, and produce a concise compactification of that text which is more brief than the source, but contains the primary points within it. Some slight modifications of this module are implemented elsewhere within the modules which specify bulleted list summaries, but the main implementation is a direct summary.
+
+Can be executed on local source files by drag-and-drop, and the same for web sources via URL, or by direct text supply to the input box.
+
+<img width="840" alt="math_solver" src="https://github.com/user-attachments/assets/c587d9de-0efc-4857-9dac-e502bff0ba7d" />
+
+#### Math Solver
+The math solver approaches answering problems by prompting the LLM to generate a python script to answer the question. That code is extracted from the output, then given a basic sanitization to prevent untoward uses and force a timeout limit, and further a global result variable is introduced so that the script can be executed and the results extracted. The result extraction routine is a substantial piece of classical analysis over top of the LLM code output.
+
+It is quite sensitive to model choice in the sense that nearly all modules will generate viable output, but only a few reliably produce correct answers.
+
+<img width="840" alt="multianswer" src="https://github.com/user-attachments/assets/f62ce090-300e-4fda-a10b-3caa583c5db1" />
+
+#### Multianswerer
+The Multianswer module takes an input question or prompt and then processes that answer with three different models, and the output from those models is then combined into a single synthetic answer by a supervisor model. This approach seeks to leverage the advantages of having access to multiple different modules with different strengths, and is effective at constraining the output to sane and viable results, on account of the supervisor drawing from information provided to it, rather than performing its own conceptual evaluations.
+
+It is also a strong candidate as a potent building block module for implementing higher level pyramidal processing, for instance by implemeting a sort of soft voting logic for mid-grade complexity tasks addressed by compact models, or for increasing the reliability of small closed-loop tasks like affect analysis or sanity checking (Such as asking a multiasker 'here's what another LLM said, does it make sense and is it relevant?') without having to resort to larger, more sophisticated models.
+
+<img width="840" alt="reference_searcher" src="https://github.com/user-attachments/assets/a2f37f8d-9363-4363-9279-213e205f56eb" />
+
+#### Reference Searcher
+The reference searcher is a direct method of reducing false or hallucinatory data in responses, build around engineering the models used to only sort and process data drawn from another source, not within its own generation space. It starts by generating a list of search terms for a given question, then using a search-and-suggest method build into the database or archive which it is drawing from to acquire source texts. Sections from those source texts are then evaluated for relevance to the current question, and those sections are pulled and their main points extracted.
+
+The main points from the relevant sections of each source are then combined, and a final model makes a synthesis summary of all the selected data as the final output. At every step, the LLMs are prompted to manipulate source information, rather than produce their own information, and so in tests thus far the module has been exceptionally constrained in its output, and very reliably factual.
+
+<img width="520" alt="chatter" src="https://github.com/user-attachments/assets/48dda452-1a38-411e-b995-0eb068a9e8f2" />
+
+#### Chatter
+The chatter module is the most basic and fundamental sort of interaction system, and the first of these modules with proper user interactions int he sense of an active back and forth. It is also the first with a proper interaction history, as well. In order to keep its context window small and execution efficient, it is designed to monitor the length of the interaction, and when periodically exceeding a set length, summarizes the prior conversation into a set of key points (including the previous summary, if such is available). From there, it truncates the actual message history to a few recent messages, for smooth continuity, and then is provided the key points summary as SYSTEM input for firm guidance of the direction and memory.
+
+The structure of the input message prompts and SYSTEM command are designed to encourage the model to be helpful and avoid syncophantic replies, and to stay on topic. As such, it performs less of a social interaction role, and more of a supportive assistantship. It has demonstrated effective performance in several open-ended back and forth taskes, such as recipe planning, practical problem solving, and brainstorming.
+
+<img width="840" alt="debator" src="https://github.com/user-attachments/assets/13bc5e20-215a-4456-9cbc-8588d81ae4d9" />
+
+#### Debator
+The debator module 
+
+<img width="840" alt="text_analysis" src="https://github.com/user-attachments/assets/e9c52c20-b90c-4ba8-a6c1-c5edc7faabfc" />
+
+#### Text Analysis
+
+<img width="520" alt="refiner" src="https://github.com/user-attachments/assets/57ff6251-eda3-4ea3-92fd-ca0e64e732d8" />
+
+#### Refiner
 
 
 
