@@ -11,6 +11,16 @@ Redwolf is a package of local AI tools, joint combinations of modern and classic
 
 The name is borrowed from an old IRC bot we made back in '09-'11 that did some AIML chatting and basic command execution.
 
+## Motivation
+There's a litany of them:
+
+- AIAAS is not private, they outright [state](http://openai.com/policies/row-privacy-policy/#:~:text=We%20collect%20Personal%20Data%20that%20you%20provide%20in%20the%20input%20to%20our%20Services) that they collect everything you put into them, and use that to train the future models 
+- The power consumption for fast execution in the cloud is extraordinary, and the power costs for faster speeds are distinctly nonlinear (meaning that waiting 10 seconds for a reply instead of 5 saves more than double the power)
+- For-profit AIAAS systems (even the ones making mone on data sales or adverts) have a perverse incentive to engineer their product to make people want to use it more (more pleasant, more fun, or even set to be just good enough to stretch out the interactions as long as users will tolerate) instead of for robust, reliable, effective, correct output.
+- If the internet goes out, your tool is dead in the water
+- LLM models are starting to hit a plateau, like all technology does. I mark the start of this phase with Deepseek, a la [G. S. Altshuller's Laws of technical evolution #7](https://en.wikipedia.org/wiki/Laws_of_technical_systems_evolution#Patterns_of_evolution) The value-add now is in structuring the systems built on them to be more effective and sophisticated.
+- The quality of open-source LLMs has been apparoaching that of the closed models for a while now, and even if the gap never closes because the incentive to push evaporates (which I think is unlikely- the OS players have a vested interest in matching the CS ones) they're close enough that good accouterment make the gap immaterial
+
 ## Overview
 The overall structure of Redwolf has three parts: 
 - A primary script implementing all the utility modules and a loop to execute and toggle between them
