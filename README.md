@@ -1,6 +1,5 @@
 <img width="922" alt="image" src="https://github.com/user-attachments/assets/b1700143-d615-4c50-a1dc-08f49bb5c43c" />
 
-
 # REDWOLF
 
 ## Introduction
@@ -27,6 +26,18 @@ The former is a package designed to read ZIM archive files and produce an NLP/LL
 The latter file implements all the prompt engineering side of getting the LLM modules to output reasonably reliable and processable output, as well as guidance to restrict them to more or less sane and useful results. Most of bringing the systems into closed-loop execution is performed with standard NLP and other classical algorithms. It also sets up module prototypes, which allow the UI side to build the interface for the user and manage model selection, input, and SYSTEM messages to the modules.
 
 For the actual interface to the LLMs, Redwolf uses Ollama. A lot of the main nerds will tell you to avoid it, and there is an intend to port the package over to llama.cpp at some point, but for now ollama is easier to use, easier to install, and easier to grab models for, so it's the baseline. We keep archived copies of the ollama package and 
+
+### Requirements
+The Redwolf package requires the following additional packages:
+
+`numpy, cv2, ollama, nltk, libzim, bs4`
+
+Additionally, nltk needs the following corpus downloads:
+
+`nltk.download("wordnet31")`
+`nltk.download("vader_lexicon")`
+`nltk.download('subjectivity')`
+
 
 ## Techniques
 
@@ -135,7 +146,7 @@ The combined set of thesis, abstract, concise text, analysis questions, and synt
 <img width="520" alt="refiner" src="https://github.com/user-attachments/assets/57ff6251-eda3-4ea3-92fd-ca0e64e732d8" />
 
 #### Refiner
-The refiner is intended as a component of a future brainstorming and problem-solving focused module, however is useful as a stand-alone module for editing and thought clarification uses as well. It is a heavily user interaction-based module, in which the module is provided with an initial statement (typically from a user in the standalone version, but intended to be a first-pass statement from an LLM when used as a submodule) for which the user provides feedback
+The refiner is intended as a component of a future brainstorming and problem-solving focused module, however is useful as a stand-alone module for editing and thought clarification uses as well. It is a heavily user interaction-based module, in which the module is provided with an initial statement (typically from a user in the standalone version, but intended to be a first-pass statement from an LLM when used as a submodule) for which the user provides feedback. That feedback is then used by the module to generate a revised form of the statement.
 
+The user is then asked to approve or disapprove of the changes. If the user approves, then the working statement is updated to the new version, and prompted for further revisions. Otherwise, the statement remains the same, and the user is prompted to provide alternative feedback for another pass.
 
-## Prospective Additions
