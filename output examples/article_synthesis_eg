@@ -1,0 +1,89 @@
+Asking: 
+For the topic "What are werewolves?", reply in the following template with three highly relevant encyclopedia article titles which may be used as background context for the question: "What are werewolves?". Reply with no other content but the filled template. Supply only a list of titles in the 'Articles' field. 
+### Template 
+{"Articles":[] }
+
+6.475000619888306 s ["Wolves", "Werewolf", "Lycanthropy"]
+targets:  ['A/Wolves', 'A/WolVes', 'A/BC_Wolves', 'A/Bad_Wolves', 'A/Among_Wolves', 'A/Algeti_Wolves', 'A/Arctic_Wolves', 'A/ASU_wolves', 'A/Augusta_Wolves', 'A/Baby_wolves', 'A/Abyssian_Wolves', 'A/American_Wolves', 'A/Billings_Wolves', 'A/Wolves_in_Wolves', 'A/Admiralty_Wolves', 'A/Akwesasne_Wolves', 'A/Abyssinian_Wolves', 'A/Arctic_wolves', 'A/Abyssian_wolves', 'A/Belgrade_wolves']
+targets:  ['A/Werewolf', 'A/Mr._Werewolf', 'A/The_Werewolf', 'A/Mama_Werewolf', 'A/Radio_Werewolf', 'A/Werewolf_(1996)', 'A/Female_Werewolf', 'A/Werewolf_(film)', 'A/The_werewolf', 'A/Arizona_Werewolf', 'A/Garou_(Werewolf)', 'A/American_Werewolf', 'A/Ultimate_Werewolf', 'A/Werewolf_(comics)', 'A/Radio_werewolf', 'A/Operation_Werewolf', 'A/Livonian_werewolf', 'A/Ultimate_werewolf', 'A/Werewolf_(Buffyverse)', 'A/Werewolf_(disambiguation)']
+targets:  ['A/Lycanthropy', 'A/Lycanthropy_(song)', 'A/Lycanthropy_(Album)', 'A/Lycanthropy_(album)', 'A/Clinical_Lycanthropy', 'A/Lycanthropy_(clinical)', 'A/Clinical_lycanthropy', 'A/Lycanthropy_(disambiguation)']
+to_grabs:  ['A/Wolves', 'A/Werewolf', 'A/Lycanthropy']
+article sections:
+   Wolf
+     Wolf 3304
+     Etymology 781
+     Taxonomy 6922
+     Description 5719
+     Ecology 9179
+     Behaviour 11629
+     Status and conservation 6428
+     Relationships with humans 13626
+     Notes 329
+     References 28512
+     Bibliography 1092
+   Werewolf
+     Werewolf 4477
+     Names 3315
+     History 15912
+     Lycanthropy as a medical condition 1852
+     Folk beliefs 12043
+     Modern reception 5939
+     See also 92
+     Notes 1232
+     Citations 9565
+     References 2877
+     Further reading 645
+Getting relevant for:  Wolf
+3.6586782932281494 s  Sections: ['Description', 'Behaviour']
+Getting relevant for:  Werewolf
+4.836586236953735 s  Sections: ['Names', 'History', 'Lycanthropy as a medical condition', 'Folk beliefs']
+Pulling from:  Wolf
+    pull section: Wolf : Wolf
+    pull section: Wolf : Description
+    pull section: Wolf : Behaviour
+Pulling from:  Werewolf
+    pull section: Werewolf : Werewolf
+    pull section: Werewolf : Names
+    pull section: Werewolf : History
+    pull section: Werewolf : Lycanthropy as a medical condition
+    pull section: Werewolf : Folk beliefs
+background text: 
+--------
+
+--------
+Getting answer
+261.226934671402 s Final answer:
+--------
+The passage discusses werewolf folklore across different cultures and regions around the world, exploring various aspects such as causes, transformations, treatments, beliefs about revenant spirits, religious associations, and connections to other supernatural creatures. Here's a breakdown of some key points:
+
+1. **Cultural Variations**: Werewolf myths differ significantly by region, with various explanations for their appearance and behavior:
+   - In Eastern Europe, wolves were thought to be cursed or exorcized into human form, while in Scandinavia, they were believed to be malevolent.
+   - Native American beliefs often featured wolf-like creatures that guarded sacred places or were responsible for killing hunters.
+
+2. **Causation**: Causes of werewolf transformations vary widely:
+   - Parental abuse was a common cause in Eastern European folklore
+   - The belief that people could become wolves after passing through an arch with birch and rose spine
+   - In North America, beliefs often associated lycanthropy with witchcraft or other evil spirits
+
+3. **Transformations**: Transformations described varied:
+   - Transformation into a wolf was common but not always immediate
+   - Some werewolves could transform at will while others were involuntarily transformed
+   - The timing of transformations (Easter, winter solstice) was often significant in some cultures
+
+4. **Cures and Treatments**: Various methods to cure lycanthropy were used:
+   - Medieval practitioners advocated medical treatments like wolfsbane or exorcism
+   - The conversion to Christianity was also a common method
+   - Beliefs about the power of the Devil or saintly powers for transforming others
+
+5. **Belief in Revenants**: Werewolves were often linked to revenant spirits:
+   - In Hungarian folklore, vampires and werewolves are closely related
+   - The belief that the transformation was involuntary was common
+   - Some versions allowed the person to choose their own animal form of transformation
+
+6. **Associations with Other Supernatural Creatures**: Werewolves were often associated with other supernatural beings:
+   - In American folklore, they were considered enemies of witches and evil spirits
+   - They were sometimes depicted as hunters of vampires
+   - The belief that werewolves could spread their condition to others was common in Haitian lore
+
+The passage presents a complex picture of how different cultures interpreted and portrayed the concept of lycanthropy, with various explanations for both the appearance and behavior of werewolf figures. These legends often intertwined supernatural beliefs with religious and cultural practices, reflecting the diverse nature of medieval European society.
+--------

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	
+	body{
+		background-color: #e1ebf2;
+	}
+	.imgCntr{
+		margin-top: 0px;
+		margin-left: -35.0%;
+	}
+	.faceImg {
+		max-height:300px;
+	}
+	table {
+		width: 100%;
+	}
+	td.t1{
+		text-align: left;
+		width:50%;
+		margin-right:50%;
+		color:darkblue;
+		/*border-radius: 4px 4px 4px 4px;
+		border: 2px solid rgba(12,12,42,0.5);*/
+		padding-top:2em;
+		padding-bottom:2em;
+		padding-left:5px;
+		min-height: 5em;
+	}
+	td.t2{
+		text-align: left;
+		width:50%;
+		margin-left:50%;
+		color:darkred;
+		/*border-radius: 4px 4px 4px 4px;
+		border: 2px solid rgba(42,12,12,0.5);*/
+		padding-top:2em;
+		padding-bottom:2em;
+		padding-left:5px;
+		min-height: 5em;
+	}
+	.tbox{
+		width:50%;
+		inline-size: 50%;
+		word-break: break-all;
+    	}
+	.mainContainer{
+		display: flex;
+		padding: 5px;
+		gap: 5px;		
+	}
+	.topItem {
+		width: 100%;
+		padding: 5px;
+		margin-top: 2px;
+	}
+	.lineItem {
+		width: 100%;
+		padding: 0px;
+		margin-top: 0px;
+	}
+	.boxedDiv{
+		border: 2px solid darkred;
+		border-radius: 4px 4px 4px 4px;
+		padding:5px;
+	}
+	 pre {
+	    text-align: left;
+	    white-space: pre-line;
+	    margin-top: -5px;
+	    padding-top: 0;
+  	}
+  	.modelCard{
+		border-radius: 4px 4px 4px 4px;
+		background: linear-gradient(135deg,rgba(100, 83, 153, 0.45) 12%, rgba(83, 153, 102, 0.33) 78%);
+		padding: 5px;
+  	}
+  	.shadow_text{
+  		text-shadow: 0px 0px 5px #FFFFDF;
+  	}
+	.lowerBox{
+		border-radius: 4px 4px 4px 4px;
+		background: linear-gradient(135deg,rgba(217, 131, 50, 1) 12%, rgba(153, 37, 207, 0.45) 78%);
+		padding: 5px;
+	}
+
+	</style>
+	</head>
+
+	<body>
+		<h1></h1> <!--Don't remember why I wanted an empty header-->
+
+		<!--Top level container for the module selector, reset button, and clock -->
+		<div class="mainContainer" style="background: linear-gradient(135deg,rgba(26, 141, 186, 1) 0%, rgba(52, 207, 65, 0.48) 100%); border-radius: 4px 4px 4px 4px;">
+			<div class="topItem" style="width:30%;">
+
+				<span id="ModuleSel">
+					<span id="modulesList" style="color:rgba(200, 0, 0, 0.85) ;text-shadow: 0 0 1px #000000;" value=basicSummarizor>Awaiting Server...</span>
+				</span>
+
+				<button id="button2" onclick="reset();">Reset</button>
+
+				<span id="clock">bloop.</span> <!--I like a clock so you can see if the JS hangs -->
+
+			</div>
+
+			<div class="topItem" style="width:25%">
+				<!--Placeholder for spacing -->
+			</div>
+
+			<div class="topItem" style="border: 2px solid black; background: rgba(207, 35, 35, 0.84);width:42%;height:1em;overflow:hidden;border-radius: 4px 4px 4px 4px;">
+
+				<!--Warnings box -->
+				<pre>
+				<div id="warns" style="color:rgba(232, 234, 235, 1);"></div>
+				</pre>
+
+			</div>
+
+		</div>
+
+		<!--Mid level box for the panels, image, and feed -->
+		<div class="mainContainer">
+		
+			<!--Where the panels get put -->
+			<div class="topItem">
+				<div id="panel" class="modelCard"></div>
+			</div>
+
+			<!--REWOLF logo -->
+			<div class="topItem" style="width:fit-content;">
+				<img id = "face" class="faceImg" src="REDWOLF.jpg">
+			</div>
+
+			<!--Feed box -->
+			<div class="topItem" id="rightPanel" style="border: 2px solid black; background: rgba(35, 64, 207, 0.87); max-height:18em;overflow:hidden;border-radius: 4px 4px 4px 4px;"">
+				<pre>
+				<div id="feed" style="color:rgba(165, 168, 181, 1);"></div>
+				</pre>
+			</div>
+		</div>
+
+		<!--Lower box for input anf  system commands -->
+		<div class="mainContainer" style="background: linear-gradient(135deg,rgba(217, 131, 50, 1) 12%, rgba(153, 37, 207, 0.45) 78%);border-radius: 4px 4px 4px 4px;">
+
+			<div style="width:8em;">
+				<button id="modButton" onclick="inpClick(event);" style="width:8em;">Send Module</button>
+			</div>
+
+			<!--Input filled in or blocked in JS for module send requirement -->
+			<div id="inpDiv" style="width:14em;"></div>
+
+			<!--SYSTEM input box -->
+			<div style="align">
+			Additional SYSTEM commands: <input type="text "id="addlSYS" style="width:50em;"/>
+			</div>
+
+		</div>
+
+		<hr> <!--Bar to separate main inputs from interaction box -->
+		
+		<!--Template table for edit later-->
+		<table>
+			<tbody>
+			  	<tr>
+				    <th>You</th>
+				    <th>Partner</th>
+				</tr>
+			</tbody>
+		</table>	
+		<table>
+			<tbody id="table1">
+			</tbody>
+		</table>
+
+
+
+<script src="REDWOLF2_face.js">
+</script>
+
+</body>
+</html>

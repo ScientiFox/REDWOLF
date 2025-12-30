@@ -1,0 +1,192 @@
+
+Parser example:
+
+<h3>Lycanthropy as a medical condition</h3>
+
+See also: <span id="Hypertrichosis" title onclick="linkClicked(event);" style="color:blue;">Hypertrichosis</span>  and <span id="Clinical_lycanthropy" title onclick="linkClicked(event);" style="color:blue;">Clinical lycanthropy</span> 
+Some modern researchers have tried to explain the reports of werewolf behaviour with recognised medical conditions. Dr Lee Illis of <span id="Guy's_Hospital" title onclick="linkClicked(event);" style="color:blue;">Guy's Hospital</span>  in London wrote a paper in 1963 entitled On Porphyria and the Aetiology of Werewolves in which he argues that historical accounts on werewolves could have in fact been referring to victims of congenital <span id="Porphyria" title onclick="linkClicked(event);" style="color:blue;">porphyria</span> , stating how the symptoms of <span id="Photosensitivity" title onclick="linkClicked(event);" style="color:blue;">photosensitivity</span> , reddish teeth, and <span id="Psychosis" title onclick="linkClicked(event);" style="color:blue;">psychosis</span>  could have been grounds for accusing a person of being a werewolf.[59] This is, however, argued against by Woodward, who points out how mythological werewolves were almost invariably portrayed as resembling true wolves and that their human forms were rarely physically conspicuous as porphyria victims.[45] Others have pointed out the possibility of historical werewolves having been people with <span id="Hypertrichosis" title onclick="linkClicked(event);" style="color:blue;">hypertrichosis</span> , a hereditary condition manifesting itself in excessive hair growth. However, Woodward dismissed the possibility, as the rarity of the disease ruled it out from happening on a large scale as werewolf cases were in medieval Europe.[45]
+Woodward suggested <span id="Rabies" title onclick="linkClicked(event);" style="color:blue;">rabies</span>  as the origin of werewolf beliefs, claiming remarkable similarities between the symptoms of that disease and some of the legends. Woodward focused on the idea that being bitten by a werewolf could result in the victim turning into one, which suggested the idea of a transmittable disease like rabies.[45] However, the idea that lycanthropy could be transmitted in this way is not part of the original myths and legends and only appears in relatively recent beliefs. Lycanthropy can also be met with as the main content of a delusion, for example, the case of a woman has been reported who during episodes of acute psychosis complained of becoming four different species of animals.[60]
+
+
+
+See also: Hypertrichosis and Clinical lycanthropy Some modern researchers have tried to explain the reports of werewolf behaviour with recognised medical conditions. Dr Lee Illis of Guy's Hospital in London wrote a paper in 1963 entitled On Porphyria and the Aetiology of Werewolves in which he argues that historical accounts on werewolves could have in fact been referring to victims of congenital porphyria , stating how the symptoms of photosensitivity , reddish teeth, and psychosis could have been grounds for accusing a person of being a werewolf.\[59\] This is, however, argued against by Woodward, who points out how mythological werewolves were almost invariably portrayed as resembling true wolves and that their human forms were rarely physically conspicuous as porphyria victims.\[45\] Others have pointed out the possibility of historical werewolves having been people with hypertrichosis , a hereditary condition manifesting itself in excessive hair growth. However, Woodward dismissed the possibility, as the rarity of the disease ruled it out from happening on a large scale as werewolf cases were in medieval Europe.\[45\] Woodward suggested rabies as the origin of werewolf beliefs, claiming remarkable similarities between the symptoms of that disease and some of the legends. Woodward focused on the idea that being bitten by a werewolf could result in the victim turning into one, which suggested the idea of a transmittable disease like rabies.\[45\] However, the idea that lycanthropy could be transmitted in this way is not part of the original myths and legends and only appears in relatively recent beliefs. Lycanthropy can also be met with as the main content of a delusion, for example, the case of a woman has been reported who during episodes of acute psychosis complained of becoming four different species of animals.\[60\]
+
+
+
+Extractor example:
+
+Summarize the following text as compactly as possible: "Here's my opening argument on the topic of predestination: **Point 1: The Bible does not explicitly teach predestination**, which means that the concept of predestination is not clearly stated or taught in Scripture. While the Bible does emphasize God's sovereignty and control over human events, it does not provide a systematic explanation for how God chooses certain individuals to salvation before the foundation of the world. **Point 2: The doctrine of predestination contradicts the biblical concept of free will**, which is a fundamental aspect of Christian theology. If God predetermines all events, including human decisions and actions, then do humans truly have control over their choices? This would undermine the idea that God's sovereignty and love are demonstrated through His provision of salvation to humanity. **Point 3: The Bible presents a more nuanced understanding of God's sovereignty**, which emphasizes God's initiative in salvation rather than predetermination. While God may choose certain individuals for salvation, He also initiates the process by calling them out of darkness and empowering them with the Holy Spirit (Ephesians 1:11). This perspective highlights God's active role in human decision-making while still acknowledging His sovereignty over all things. By presenting these three points, I aim to challenge the notion that predestination is a Scripturally supported doctrine and highlight the need for further biblical exposition on this topic." in the context of the topic "Predestination is not biblically supported". Reply with only the central points
+
+USING THIS WITH DRIA IS AMAZING:
+
+### Template \n
+{\n
+    "Topic": ""\n
+    ,\n
+    "Thesis": ""\n
+    ,\n
+    "Arguments":{\n
+    	"Argument one:": "",\n
+    	"Argument two:": "",\n
+    	"Argument three:": "",\n
+    } \n
+}\n
+\n
+### Text\n
+"Here's my opening argument on the topic of predestination: **Point 1: The Bible does not explicitly teach predestination**, which means that the concept of predestination is not clearly stated or taught in Scripture. While the Bible does emphasize God's sovereignty and control over human events, it does not provide a systematic explanation for how God chooses certain individuals to salvation before the foundation of the world. **Point 2: The doctrine of predestination contradicts the biblical concept of free will**, which is a fundamental aspect of Christian theology. If God predetermines all events, including human decisions and actions, then do humans truly have control over their choices? This would undermine the idea that God's sovereignty and love are demonstrated through His provision of salvation to humanity. **Point 3: The Bible presents a more nuanced understanding of God's sovereignty**, which emphasizes God's initiative in salvation rather than predetermination. While God may choose certain individuals for salvation, He also initiates the process by calling them out of darkness and empowering them with the Holy Spirit (Ephesians 1:11). This perspective highlights God's active role in human decision-making while still acknowledging His sovereignty over all things. By presenting these three points, I aim to challenge the notion that predestination is a Scripturally supported doctrine and highlight the need for further biblical exposition on this topic."
+
+
+dria 0.5b, 7.07s:
+```json
+{
+"Topic": "",
+"Thesis": "The Bible does not explicitly teach predestination",
+"Arguments": {
+  "Argument one": "The Bible emphasizes God's sovereignty over human events but does not provide a systematic explanation for how God chooses certain individuals to salvation before the foundation of the world.",
+  "Argument two": "The doctrine of predestination contradicts the biblical concept of free will, which is a fundamental aspect of Christian theology. If God predetermines all events, including human decisions and actions, then do humans truly have control over their choices?",
+  "Argument three": "The Bible presents a more nuanced understanding of God's sovereignty, which emphasizes God's initiative in salvation rather than predetermination."
+}
+}
+```
+
+
+Relevance checker:
+
+### Template
+{\n
+    "Text Topic": ""\n
+    ,\n
+    "Context": ""\n
+    ,\n
+    "Is Text Relevant to Context (True/False)": ""\n
+    } \n
+}\n
+\n
+### Context\n
+"Investigating the metaphoric messages of werewolves"\n
+### Text\n 
+"Here's my opening argument on the topic of predestination: **Point 1: The Bible does not explicitly teach predestination**, which means that the concept of predestination is not clearly stated or taught in Scripture. While the Bible does emphasize God's sovereignty and control over human events, it does not provide a systematic explanation for how God chooses certain individuals to salvation before the foundation of the world. **Point 2: The doctrine of predestination contradicts the biblical concept of free will**, which is a fundamental aspect of Christian theology. If God predetermines all events, including human decisions and actions, then do humans truly have control over their choices? This would undermine the idea that God's sovereignty and love are demonstrated through His provision of salvation to humanity. **Point 3: The Bible presents a more nuanced understanding of God's sovereignty**, which emphasizes God's initiative in salvation rather than predetermination. While God may choose certain individuals for salvation, He also initiates the process by calling them out of darkness and empowering them with the Holy Spirit (Ephesians 1:11). This perspective highlights God's active role in human decision-making while still acknowledging His sovereignty over all things. By presenting these three points, I aim to challenge the notion that predestination is a Scripturally supported doctrine and highlight the need for further biblical exposition on this topic."
+
+
+### Template
+{"Is Text Relevant to Context (True/False)": ""}
+### Context\n
+"Investigating the metaphoric messages of werewolves"\n
+### Text\n 
+""Think It Over" is a 1978 song by Cheryl Ladd. It was released as a single from her eponymous debut album. The song was released following the second season of Charlie's Angels, the first in which Ladd was cast.
+
+The song became a top 40 hit in the United States and Canada on both the pop singles charts as well as the Adult Contemporary charts. It had its best showing on the Canadian AC chart, where it peaked at No. 29.[2] The single was also released in the UK, the Netherlands and Japan.[3]
+
+"Think It Over" was Ladd's only song to chart, although another track from the album, her original version of "I'll Never Love This Way Again", became a top 5 hit when covered by Dionne Warwick in 1979.[4] "
+
+
+
+### Template
+{"Is Text Relevant to Context (True/False)": ""}
+### Context\n
+"Investigating the metaphoric messages of werewolves"\n
+### Text\n 
+"See also: Hypertrichosis and Clinical lycanthropy Some modern researchers have tried to explain the reports of werewolf behaviour with recognised medical conditions. Dr Lee Illis of Guy's Hospital in London wrote a paper in 1963 entitled On Porphyria and the Aetiology of Werewolves in which he argues that historical accounts on werewolves could have in fact been referring to victims of congenital porphyria , stating how the symptoms of photosensitivity , reddish teeth, and psychosis could have been grounds for accusing a person of being a werewolf.\[59\] This is, however, argued against by Woodward, who points out how mythological werewolves were almost invariably portrayed as resembling true wolves and that their human forms were rarely physically conspicuous as porphyria victims.\[45\] Others have pointed out the possibility of historical werewolves having been people with hypertrichosis , a hereditary condition manifesting itself in excessive hair growth. However, Woodward dismissed the possibility, as the rarity of the disease ruled it out from happening on a large scale as werewolf cases were in medieval Europe.\[45\] Woodward suggested rabies as the origin of werewolf beliefs, claiming remarkable similarities between the symptoms of that disease and some of the legends. Woodward focused on the idea that being bitten by a werewolf could result in the victim turning into one, which suggested the idea of a transmittable disease like rabies.\[45\] However, the idea that lycanthropy could be transmitted in this way is not part of the original myths and legends and only appears in relatively recent beliefs. Lycanthropy can also be met with as the main content of a delusion, for example, the case of a woman has been reported who during episodes of acute psychosis complained of becoming four different species of animals.\[60\]"
+
+
+
+
+Write a Python script which will produce the answer of the following math question: "What is the smallest cube number greater than 11385?" Do not use any library functions that are not strictly necessary.
+
+dria 1.5b + Qwen3 reasonably fast:
+Write a Python script which will produce the answer of the following math question: "What is the smallest cube number greater than 11385?" Do not use any library functions that are not strictly necessary. Think briefly, do not produce any explanation.
+
+
+
+For the topic "{topic}", reply in the following template with three highly relevant encyclopedia article titles which may be used as background context for the question: "{question}". 
+### Template \n
+{\n
+    "Topic": ""\n
+    ,\n
+    "Question": ""\n
+    ,\n
+    "Articles":{\n
+    	"Article one:": "",\n
+    	"Article two:": "",\n
+    	"Article three:": "",\n
+    } \n
+}\n
+
+
+For the topic "Werewolves", reply in the following template with three highly relevant encyclopedia article titles which may be used as background context for the question: "What do werewolve represent metaphorically?". Reply with no other content but the filled template.
+### Template \n
+{\n
+    "Topic": ""\n
+    ,\n
+    "Question": ""\n
+    ,\n
+    "Articles":{\n
+    	"Article one:": "",\n
+    	"Article two:": "",\n
+    	"Article three:": "",\n
+    } \n
+}\n
+
+
+For the following text, reply in the template:
+### Template \n
+{\n
+    "Topic": ""\n
+    ,\n
+    "Brief Summary": ""\n
+    ,\n
+}\n
+
+
+
+
+For the topic "{topic}", reply in the following template with three highly relevant encyclopedia article titles which may be used as background context for the question: "{question}". Reply with no other content but the filled template. Supply only a list of titles in the 'Articles' field. 
+### Template 
+{"Articles":[] }
+
+For the topic "What are some important landmarks in Paris for tourism?", reply in the following template with three highly relevant encyclopedia article titles which may be used as background context for the question: "What are some important landmarks in Paris for tourism?". Reply with no other content but the filled template. Supply only a list of titles in the 'Articles' field.
+### Template
+{"Articles":[]}
+
+
+For each of the following articles and section titles, prepare a list of relevant sections for answering the question: "{question}". Reply only with directly relevant sections, and using the provided template.
+### Articles
+{title1},[{sections}]
+{title2},[{sections}]
+{title3},[{sections}]
+### Template
+{("{title1}",["relevant sections"])},
+{("{title2}",["relevant sections"])},
+{("{title2}",["relevant sections"])}
+
+
+{"Articles":["Werewolves", "Cultural and Literary Representations of Werewolves", "Mythology and Folklore of Werewolves"]}
+
+Werewolf, ['Werewolf', 'Names', 'History', 'Lycanthropy as a medical condition', 'Folk beliefs', 'Modern reception', 'See also', 'Notes', 'Citations', 'References', 'Further reading']
+Culture, ['Culture', 'Description', 'Etymology', 'Change', 'Early modern discourses', 'Anthropology', 'Sociology', 'Cultural studies', 'Psychology', 'Protection of culture', 'See also', 'References', 'Further reading']
+Myth, ['Myth', 'Etymology', 'Protagonists and structure', 'Definitions', 'Interpretations', 'Academic discipline history', 'Modernity', 'See also', 'Notes', 'Sources']
+
+
+For each of the following articles and section titles, prepare a list of relevant sections for answering the question: "What is a werewolf?". Reply only with directly relevant sections, and using the provided template. Do not hesistate to leave out sections or articles that are not directly relevant.
+### Articles
+Werewolf, ['Werewolf', 'Names', 'History', 'Lycanthropy as a medical condition', 'Folk beliefs', 'Modern reception', 'See also', 'Notes', 'Citations', 'References', 'Further reading']
+Culture, ['Culture', 'Description', 'Etymology', 'Change', 'Early modern discourses', 'Anthropology', 'Sociology', 'Cultural studies', 'Psychology', 'Protection of culture', 'See also', 'References', 'Further reading']
+Myth, ['Myth', 'Etymology', 'Protagonists and structure', 'Definitions', 'Interpretations', 'Academic discipline history', 'Modernity', 'See also', 'Notes', 'Sources']
+### Template
+{("Werewolf",["relevant sections"])},
+{("Culture",["relevant sections"])},
+{("Myth",["relevant sections"])}
+
+
+For the article "{article}", with the following section titles: "{[sections]}"; which sections are the most relevant to answer the question "{question}"? Reply exclusively in the following template
+### Template
+{"{article}":["section","section","section"]}
+
+For the article "Culture", with the following section titles: "['Culture', 'Description', 'Etymology', 'Change', 'Early modern discourses', 'Anthropology', 'Sociology', 'Cultural studies', 'Psychology', 'Protection of culture', 'See also', 'References', 'Further reading']"; which sections, if any, are the most relevant to answer the question "What is a werewolf"? Answer exclusively in the following template
+### Template
+{"{article}":["section","section","section"]}
+
+For the article "Werewolf", with the following section titles: "['Werewolf', 'Names', 'History', 'Lycanthropy as a medical condition', 'Folk beliefs', 'Modern reception', 'See also', 'Notes', 'Citations', 'References', 'Further reading']"; which sections are the most relevant to answer the question "What is a werewolf"? Reply exclusively in the following template
+### Template
+{"{article}":["section","section","section"]}
+

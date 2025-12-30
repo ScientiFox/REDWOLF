@@ -1,0 +1,34 @@
+For the following question, reply as briefly as possible with a list of three highly relevant encyclopedia article titles which may be used as background context for the question: "What is a werewolf?". Reply only with a comma-separated list and no other content.
+
+Is the following statement generally affirmative or negative? "Okay, that sounds good" Reply only with "Yes", "No", or "Indeterminate"
+
+What is the subject of the following sentence? "Yesterday, I went down to the river and went looking for algae for my aquarium." Answer as briefly as possible.
+
+Which of the following sections from the article "Werewolf", if any, are especially relevant to answering the question "What is the symbolism of werewolves?", ['Werewolf', 'Names', 'History', 'Lycanthropy as a medical condition', 'Folk beliefs', 'Modern reception', 'See also', 'Notes', 'Citations', 'References', 'Further reading']; answer only with a list of section titles provided, or 'None' if none of the sections are relevant to the question.
+
+
+
+
+Round two updates:
+
+For the following question, reply as briefly as possible with a list of {number} highly relevant encyclopedia article titles which may be used as background context for the question: {question}. Reply only with a one-line, comma-separated list and no other content.
+
+Is the following statement generally affirmative or negative? "{statement}" Reply only with "Affirmative", "Negative", or "Indeterminate"
+
+
+
+Debator:
+
+You are debating the topic: "Predestination", taking the position: "Predestination is not scripturally supported". Summarize your opening argument in a list of short bulleted points. List only the points, not explanations
+
+You are debating the topic: "Predestination", taking the position: "Predestination is not scripturally supported". Summarize your opening argument in a list of three short bulleted points. List only the points, not explanations
+
+
+>You are debating the topic: "Predestination", taking the position: "Predestination is not scripturally supported". Summarize your opening argument in a list of three short bulleted points.
+
+>Succinctly state your three points in a compact manner for delivery to your opponent. Reply with only the summary of your points
+
+
+
+
+
