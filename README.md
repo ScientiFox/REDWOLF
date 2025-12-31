@@ -28,7 +28,7 @@ The overall structure of Redwolf has three parts:
 - A websockets server with queues to manage async contact between the other two
 
 Also, there's two other main supporting components:
-- An archive interface (currently for Wiki ZIM files, prospectively for Google Scholar and other assets)
+- An archive interface (currently for Wiki ZIM files, prospectively for Google Scholar and other assets), download ZIM files [here](https://dumps.wikimedia.org/kiwix/zim/wikipedia/)
 - A source file of genericized prompts for executing structured requests and tests of the modules
 
 The former is a package designed to read ZIM archive files and produce an NLP/LLM friendly set of section-delimited text blocks. Right now, that means it needs a local copy of a ZIM file, which often run to the dozens of gigabytes, but they're readily available, and we keep archived copies as well.
