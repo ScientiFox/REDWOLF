@@ -62,6 +62,8 @@ And a set of ollama compatile LLMs should be downloaded. We recommend, at a mini
 `qwen3`
 `llama3.2`
 
+`RW_setup.py` is included to acquire the required packages, recommended LLM files, NLTK corpus, and direct the user to grab a ZIM file (they're often dozens of gigabytes, so the user is prompted to visit and pick their own comfort level).
+
 ### Execution
 
 To execute the package, the contents should be downloaded, with a suitable ZIM archive located in the same directory. `RW2_server.py` and `REDWOLF2.py` should then be executed as independent processes. The UI will open in your default browser automatically.
