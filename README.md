@@ -62,6 +62,7 @@ And a set of ollama compatile LLMs should be downloaded. We recommend, at a mini
 `qwen3`
 `llama3.2`
 
+#### Setup
 `RW_setup.py` is included to acquire the required packages, recommended LLM files, NLTK corpus, and direct the user to grab a ZIM file (they're often dozens of gigabytes, so the user is prompted to visit and pick their own comfort level).
 
 ### Execution
