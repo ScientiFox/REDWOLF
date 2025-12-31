@@ -38,7 +38,7 @@ The latter file implements all the prompt engineering side of getting the LLM mo
 For the actual interface to the LLMs, Redwolf uses Ollama. A lot of the main nerds will tell you to avoid it, and there is an intend to port the package over to llama.cpp at some point, but for now ollama is easier to use, easier to install, and easier to grab models for, so it's the baseline. We keep archived copies of the ollama package and 
 
 ### Requirements
-The Redwolf package requires the following additional packages:
+This deployment is an experimental package, not a turnkey system, and assumes you have Python installed (you can get it [here](https://www.python.org/downloads/)!), although it should only require a few steps to get running. Additionally, the Redwolf package requires the following additional packages:
 
 `numpy, cv2, ollama, nltk, libzim, bs4`
 
@@ -63,11 +63,11 @@ And a set of ollama compatile LLMs should be downloaded. We recommend, at a mini
 `llama3.2`
 
 #### Setup
-`RW_setup.py` is included to acquire the required packages, recommended LLM files, NLTK corpus, and direct the user to grab a ZIM file (they're often dozens of gigabytes, so the user is prompted to visit and pick their own comfort level).
+Once python is installed, `RW_setup.py` is included to acquire the required packages, recommended LLM files, NLTK corpus, and direct the user to grab a ZIM file (they're often dozens of gigabytes, so the user is prompted to visit and pick their own comfort level). Opening the setup file and running it (F5, usually) should start prompting the user where necessary.
 
 ### Execution
 
-To execute the package, the contents should be downloaded, with a suitable ZIM archive located in the same directory. `RW2_server.py` and `REDWOLF2.py` should then be executed as independent processes. The UI will open in your default browser automatically.
+To execute the package, the contents should be downloaded, with a suitable ZIM archive located in the same directory. `RW2_server.py` and `REDWOLF2.py` should then be opened and executed as independent processes. The UI will open in your default browser automatically.
 
 ## Techniques
 
