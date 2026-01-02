@@ -596,7 +596,7 @@ def make_models_list(sugg,name,i):
     sugg = sugg[i:]+sugg[:i]
 
     #Strip ':latest: from the model names
-    models = [re.sub(":latest","",a['name']) for a in ollama.list()['models']]
+    models = [re.sub(":latest","",a.model) for a in ollama.list()['models']]
     output = "" #HTML output
 
     #start select block
@@ -1636,14 +1636,23 @@ class textAnalysis:
         sum_segs = []
         for seg in t_split: #Looping over each segment
 
-            if _verbose: #Verbose output
-                feedPrint("Summarizing: "," ".join(seg.split(" ")[:12])+"...")
+            #Ignore only whitespace segments
+            if len(re.findall("\S",seg)) > 0:
 
-            t1 = time.time() #Mark time
-            summ = self.summarizor.run(seg) #Summarize the segment
-            t2 = time.time()
-            run_times = run_times + [t2-t1] #Note runtimes
-            sum_segs = sum_segs + [summ] #Save the segment summary
+                if _verbose: #Verbose output
+                    feedPrint("Summarizing: "," ".join(seg.split(" ")[:12])+"...")
+
+                #If more than 25 words:
+                if len(seg.split(" ")) > 25:
+                    t1 = time.time() #Mark time
+                    summ = self.summarizor.run(seg) #Summarize the segment
+                    t2 = time.time()
+                    run_times = run_times + [t2-t1] #Note runtimes
+                    sum_segs = sum_segs + [summ] #Save the segment summary
+                else: #Otherwise, direct include
+                    sum_segs = sum_segs + [seg] #Save the segment
+            else:
+                pass
 
         #Make a more concise version of the text from the segment summary
         concise_text = "\n".join(sum_segs)
