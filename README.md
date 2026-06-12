@@ -108,7 +108,7 @@ Towards that end, all of these means of feedback control are applied throughout 
 ## Modules
 The modules currently included are detailed below, with descriptions and operational flowcharts. Every module must include a `run()` method which executes its primary function, and a `set_System()` method which applies SYSTEM commands to its submodules and models.
 
-<img width="420" height="486" alt="simple_module" src="https://github.com/user-attachments/assets/999b8a85-da50-4e48-83eb-3ef5ea3847f0" />
+<img width="420" alt="simple_module" src="https://github.com/user-attachments/assets/999b8a85-da50-4e48-83eb-3ef5ea3847f0" />
 
 #### Simple Module
 The simple module is a parent class for many of the modules and submodules implemented in the later modules, and serves as a simple scaffold for the primary execution of a simple tasker dedicated to performing a singular role. The key notes about the module are that it does not implement any memory- every input submission is sent to the model with no prior history, and is formatted around a common template prompt which takes some keyed inputs which are embedded within the reference prompt in {brackets} which is replaced by the input from the module `run()` method. The reference prompts form the framework for the use of structured prompt engineering to generate outputs which are consistent with individual module goals.
@@ -158,7 +158,7 @@ The structure of the input message prompts and SYSTEM command are designed to en
 #### Debator
 The debator module is designed to take advantage of the combination of adversarial feedback which can be had by critiquing one model's output with another model, as well as the benefits of using multi-model analysis to overlap weaknesses with strengths. Supplied with a topic and (possibly) two points regarding that topic, the debator module iteratively provides each of two models with a prompt to first generate an opening argument, and then to modify their own arguments in response to those proposed by their opposite's working arguments and points.
 
-<img width="525" height="770" alt="debator_supervisor" src="https://github.com/user-attachments/assets/238d0e88-7cdd-4a59-9caa-d402510923be" />
+<img width="525" alt="debator_supervisor" src="https://github.com/user-attachments/assets/238d0e88-7cdd-4a59-9caa-d402510923be" />
 
 After a set number of rounds of iterative feedback, revisions, and rebuttals, the final pair of points and arguments are evaluated by a moderator module, which attempts to draw a nuanced, multifaceted conclusion from the direction the back and forth debate generated.
 
